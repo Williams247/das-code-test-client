@@ -1,0 +1,75 @@
+@import "./default.scss";
+@import "./variables.scss";
+
+// Layout space
+.layout-space {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 120px;
+  @media (min-width: 800px) {
+    padding-left: 290px;
+    padding-right: 290px;
+  }
+}
+
+// Navigation Bar
+.navbar {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  @media (min-width: 800px) {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+}
+
+// Menu items
+.nav-item {
+  @media (min-width: 800px) {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+.space-menu {
+  display: none;
+  @media (min-width: 800px) {
+    display: block;
+  }
+}
+
+// Reduces the amount of roundness in a bootstrap's class
+.square-card {
+  border-radius: 5px !important;
+}
+
+// Input type outline
+.form-input-outline {
+  border-bottom: 1px solid #dedede;
+}
+
+// Auth input style
+.auth-input {
+  outline: none;
+  border: none;
+  color: #a0a0a0;
+}
+
+// Sets a DOM elements to a pointer of cursor
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Float left
+.float-left {
+  float: left;
+}
+
+// Float right
+.float-right {
+  float: right;
+}
+
+// Make a text bold
+.font-weight-bold {
+  font-weight: bold;
+}
