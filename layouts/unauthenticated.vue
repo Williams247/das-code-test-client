@@ -15,7 +15,7 @@
           >
             <font-awesome-icon :icon="['fas', 'bars']" />
           </button>
-          <div class="col-lg-8 space-menu"></div>
+          <div class="col-lg-7 space-menu"></div>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">

@@ -51,10 +51,9 @@ export default {
 <style lang="scss" scoped>
 .primary-button-background {
   background: #521291;
-  border-radius: 20px;
+  border-radius: 15px;
   width: 100%;
   color: white;
-  font-weight: bold;
   &:hover {
     background: white;
     border: 1px solid #521291;

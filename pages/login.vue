@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-3">
     <div class="card square-card pt-5 pb-5">
       <div class="card-body px-5 py-4">
         <div class="d-flex flex-direction-row-column">
@@ -41,8 +41,8 @@
                 action-button-type="submit"
                 variant="primary"
                 :loading="loading"
-                :label="loading ? 'Loading...':'Login'"
-                measurement="py-2 mt-5"
+                :label="loading ? 'Loading...':'Log In'"
+                measurement="py-3 mt-5"
               />
           </div>
           <div class="text-center auth-option mt-4">
