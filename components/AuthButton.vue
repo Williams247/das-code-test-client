@@ -37,7 +37,7 @@ export default {
   box-sizing: border-box;
   border-radius: 20px;
   width: 90%;
-  transition: 555ms ease;
+  transition: 100ms ease;
   .auth-button-text {
     margin-top: 5px;
     margin-left: 6px
@@ -47,14 +47,24 @@ export default {
   }
 }
 .auth-facebook-button {
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding-top: 10px;
+  }
  @media (min-width: 800px) {
    margin-left: 15px;
  }
 }
 
 .auth-google-button {
+  margin-top: 15px;
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding-top: 11px;
+  }
  @media (min-width: 800px) {
    margin-left: 15px;
+   margin-top: 0;
  }
 }
 

@@ -1,6 +1,19 @@
 @import "./default.scss";
 @import "./variables.scss";
 
+// Primary layout color
+.first-layout {
+  background-image: $layout-background
+}
+
+// Product navigation brad style
+.navbar-brand {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+}
+
 // Layout space
 .layout-space {
   padding-left: 20px;
@@ -72,4 +85,11 @@
 // Make a text bold
 .font-weight-bold {
   font-weight: bold;
+}
+
+// Alternative auth text
+.alternative {
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 }

@@ -1,9 +1,11 @@
 <template>
-  <div id="unauthenticiated-layout">
+  <div class="first-layout">
     <div id="unauthenticiated-navbar">
       <nav class="navbar navbar-expand-lg py-4">
         <div class="container-fluid">
-          <div class="navbar-brand primary-color">Skills Village</div>
+          <div class="navbar-brand primary-color">
+            Skills Village
+          </div>
           <button
             class="navbar-toggler"
             type="button"
@@ -15,20 +17,28 @@
           >
             <font-awesome-icon :icon="['fas', 'bars']" />
           </button>
-          <div class="col-lg-8 space-menu"></div>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <div class="col-lg-7 space-menu" />
+          <div id="navbarTogglerDemo03" class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <nuxt-link to>Home</nuxt-link>
+                <nuxt-link to="">
+                  Home
+                </nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to>Courses</nuxt-link>
+                <nuxt-link to="">
+                  Courses
+                </nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to>FAQs</nuxt-link>
+                <nuxt-link to="">
+                  FAQs
+                </nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to>Contact</nuxt-link>
+                <nuxt-link to="">
+                  Contact
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -40,15 +50,3 @@
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-#unauthenticiated-layout {
-  background-image: linear-gradient(50deg, #a8a0af, #dceaf6, #dceaf6);
-}
-.navbar-brand {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 25px;
-}
-</style>
