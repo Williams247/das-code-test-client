@@ -1,9 +1,35 @@
 @import "./default.scss";
 @import "./variables.scss";
 
+// General styles
+* {
+  font-family: sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// Removes default list bullet points
+li {
+  list-style-type: none;
+}
+
 // Primary layout color
 .first-layout {
-  background-image: $layout-background
+  background-image: $layout-background;
+}
+
+.second-layout {
+  background: $layout-background-2;
 }
 
 // Product navigation brad style
@@ -38,8 +64,9 @@
 // Menu items
 .nav-item {
   @media (min-width: 800px) {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    font-size: 14px;
+    padding-left: 23px !important;
+    padding-right: 23px !important;
   }
 }
 
@@ -92,4 +119,28 @@
   @media (max-width: 480px) {
     font-size: 18px;
   }
+}
+
+// Navigation top
+.nav-btn {
+  margin-top: 15px;
+  @media (min-width: 800px) {
+    margin-top: 0;
+  }
+}
+
+// Remove default button border
+.btn-btn {
+  border: none;
+  background: transparent;
+}
+
+// Remove border from card
+.remove-card-border {
+  border: none !important;
+}
+
+// Slitly rounded
+.round {
+  border-radius: 20px !important;
 }

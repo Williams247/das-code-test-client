@@ -4,7 +4,7 @@
       v-if="variant === 'primary'"
       :type="actionButtonType"
       :disabled="loading"
-      :class="`text-center btn primary-button-background ${measurement}`"
+      :class="`text-center btn primary-button ${measurement}`"
     >
       <span
         v-if="loading"
@@ -14,9 +14,20 @@
       />
       {{ label }}
     </button>
-    <!-- <button v-if="variant === 'primary-outlined'" :type="actionButtonType" :disabled="loading" :class="`text-center primary-outline-button-background ${measurement}`">
-           <span v-if="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> {{ label }}
-    </button>-->
+    <button
+      v-if="variant === 'primary-outline'"
+      :type="actionButtonType"
+      :disabled="loading"
+      :class="`text-center btn primary-button-outline ${measurement}`"
+    >
+      <span
+        v-if="loading"
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      />
+      {{ label }}
+    </button>
   </div>
 </template>
 
@@ -50,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/css/index.scss';
-.primary-button-background {
+.primary-button {
   background: $primary;
   border-radius: 15px;
   width: 100%;
@@ -59,6 +70,18 @@ export default {
     background: white;
     border: 1px solid $primary;
     color: $primary;
+  }
+}
+
+.primary-button-outline {
+  background: transparent;
+  border-radius: 15px;
+  width: 100%;
+  color: $primary;
+  border: 1px solid $primary;
+  &:hover {
+    background: $primary;
+    color: white;
   }
 }
 </style>

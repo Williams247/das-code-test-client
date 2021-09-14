@@ -50,3 +50,9 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'Unauthenticated_Layout'
+}
+</script>
