@@ -42,7 +42,7 @@ export default {
     margin-top: 5px;
     margin-left: 6px
   }
-  &:hover {
+  &:active {
     transform: scale(.9);
   }
 }
