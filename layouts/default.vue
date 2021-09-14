@@ -1,7 +1,7 @@
 <template>
   <div class="first-layout">
     <div id="authenticiated-navbar">
-      <nav class="navbar navbar-expand-lg py-4">
+      <nav class="navbar navbar-expand-lg p-t-b">
         <div class="container-fluid">
           <div class="navbar-brand primary-color">
             Skills Village
@@ -149,6 +149,13 @@ export default {
 }
 .navbar {
   background: #eff3fa;
+}
+
+.p-t-b {
+  @media (min-width: 800px) {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
 }
 
 #space-menu {

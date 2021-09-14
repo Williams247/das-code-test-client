@@ -28,6 +28,20 @@
       />
       {{ label }}
     </button>
+     <button
+      v-if="variant === 'dark-outline'"
+      :type="actionButtonType"
+      :disabled="loading"
+      :class="`text-center btn dark-button-outline ${measurement}`"
+    >
+      <span
+        v-if="loading"
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      />
+      {{ label }}
+    </button>
   </div>
 </template>
 
@@ -79,6 +93,18 @@ export default {
   width: 100%;
   color: $primary;
   border: 1px solid $primary;
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+}
+
+.dark-button-outline {
+  background: transparent;
+  border-radius: 15px;
+  width: 100%;
+  color: black;
+  border: 1px solid gray;
   &:hover {
     background: $primary;
     color: white;

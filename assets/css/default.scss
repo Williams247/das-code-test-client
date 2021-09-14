@@ -40,6 +40,11 @@ a {
   box-shadow: 1px 1px 28px #e5e5e5;
 }
 
+// Sets bootstrap's default gray/back borders to none
+.card-dark-shadow {
+  box-shadow: 1px 3px 10px #e0e0e0 !important;
+}
+
 .fa-eye,
 .fa-eye-slash {
   color: #dedede !important;

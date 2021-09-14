@@ -135,6 +135,11 @@ li {
   background: transparent;
 }
 
+// Removes box shadow
+.card-special {
+  box-shadow: none !important;
+}
+
 // Remove border from card
 .remove-card-border {
   border: none !important;
