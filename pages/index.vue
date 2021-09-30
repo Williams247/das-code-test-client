@@ -57,7 +57,7 @@ export default {
   },
   async created () {
     try {
-      const { data: { total, possibleSums } } = await this.$axios.get('/getsecret')
+      const { data: { result: { total, possibleSums } } } = await this.$axios.get('/getsecret')
       this.total = total
       this.possibleGuesses = possibleSums
     } catch (error) {
