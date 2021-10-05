@@ -58,8 +58,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // baseUrl: 'https://das-code-test-api.herokuapp.com'
-    baseUrl: 'http://localhost:8000'
+    baseUrl: 'https://das-code-test-api.herokuapp.com'
+    // baseUrl: 'http://localhost:8000'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
