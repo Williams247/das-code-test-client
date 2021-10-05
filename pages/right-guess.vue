@@ -10,7 +10,7 @@
         <right-guess />
       </div>
        <div id="guess" class="mt-4">
-        It took you {{ guesses }} guesses.
+        It took you {{ guesses }} {{ guesses > 1 ? 'guesses' : 'guess' }}.
       </div>
     </div>
   </div>
