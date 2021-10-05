@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-content-center pt-5 pb-5">
-    <h1 v-if="!total && !possibleGuesses">
+    <h1 v-if="loading">
       Loading.......
     </h1>
     <div v-if="total && possibleGuesses" id="index" class="mt-5 pb-5">
@@ -54,15 +54,18 @@ export default {
       guessNumber: null,
       total: null,
       possibleGuesses: [],
-      guesses: 0
+      guesses: 0,
+      loading: true
     }
   },
   async created () {
     try {
       const { data: { result: { total, possibleSums } } } = await this.$axios.get('/getsecret')
+      this.loading = false
       this.total = total
       this.possibleGuesses = possibleSums
     } catch (error) {
+      this.loading = false
       alert(errorMessages.serverError)
       console.log(error)
     }
