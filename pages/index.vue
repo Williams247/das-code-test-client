@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import errorMessages from '@/helper/error'
 export default {
   name: 'Questionaire',
   data () {
@@ -52,7 +53,8 @@ export default {
       wrongAns: false,
       guessNumber: null,
       total: null,
-      possibleGuesses: []
+      possibleGuesses: [],
+      guesses: 0
     }
   },
   async created () {
@@ -61,19 +63,22 @@ export default {
       this.total = total
       this.possibleGuesses = possibleSums
     } catch (error) {
-      alert('Could not fetch data')
+      alert(errorMessages.serverError)
+      console.log(error)
     }
   },
   methods: {
     handleGuessAnswer () {
       if (!Number(this.guessNumber)) {
-        alert('Please add your input')
+        alert(errorMessages.emptyInput)
       } else if (Number(this.guessNumber) !== this.total) {
         this.wrongAns = true
+        this.guesses += 1
         setTimeout(() => {
           this.wrongAns = false
         }, 2000)
       } else {
+        localStorage.setItem('guesses', JSON.stringify(this.guesses))
         localStorage.setItem('correct', JSON.stringify(this.total))
         this.$router.push('/right-guess')
       }
